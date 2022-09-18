@@ -23,8 +23,9 @@ namespace aoj
                 writer.WriteLine(csprojct);
             }
 
-            var contestHead = contestName.Substring(0, 5);
-            var contestNum = contestName.Substring(7, 1);
+            var contestStrAry = contestName.Split('_');
+            var contestHead = contestStrAry[0];
+            var contestNum = contestStrAry[1];
             //https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_A
             var dl = $"oj dl https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/{contestHead}/{contestNum}/{contestName}";
             using (StreamWriter writer = new StreamWriter($"./dl.sh", false))
