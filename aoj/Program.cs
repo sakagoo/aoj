@@ -11,7 +11,7 @@ namespace aoj
 
             var folderPath = $"../{contestName}";
             Directory.CreateDirectory(folderPath);
-            var pgmContents = "using System;\nnamespace " + contestName + "{class Program\n{\n static void Main(string[] args)\n {\n Console.WriteLine(\"Hello\");\n }\n }\n }";
+            var pgmContents = "using System;\nusing System.Collections.Generic;\nusing System.Linq;\nnamespace " + contestName + "{class Program\n{\n static void Main(string[] args)\n {\n Console.WriteLine(\"Hello\");\n }\n }\n }";
             using (StreamWriter writer = new StreamWriter($"{folderPath}/Program.cs", false))
             {
                 writer.WriteLine(pgmContents);
